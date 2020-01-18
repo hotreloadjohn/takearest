@@ -31,7 +31,7 @@ def getRndQuote():
 
 
 def getRndImage():
-    ACCESS_KEY = "43a1cdcef27a95070a4ca90b47439e340060c1b0268f09e9b3a7c75c7206e6a8"
+    ACCESS_KEY = <your API key>
     API_URL = "https://api.unsplash.com/photos/random/?client_id="+ACCESS_KEY
     params = {
         "query": "nature",
