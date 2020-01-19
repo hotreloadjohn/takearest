@@ -31,7 +31,7 @@ def getRndQuote():
 
 
 def getRndImage():
-    ACCESS_KEY = "43a1cdcef27a95070a4ca90b47439e340060c1b0268f09e9b3a7c75c7206e6a8"
+    ACCESS_KEY = ""
     API_URL = "https://api.unsplash.com/photos/random/?client_id="+ACCESS_KEY
     params = {
         "query": "nature",
@@ -51,7 +51,7 @@ def getRndImage():
     message = getRndQuote()
     color = 'rgb(0, 0, 0)' # black color
     draw.text((x, y), message, fill=color, font=font)
-    image.save('greeting_card.png')
+    image.save('screen.png')
 
     # return img_data
 
@@ -60,7 +60,7 @@ def displayImageToWindow():
     # Get random Image from Unspash
     # photo = ImageTk.PhotoImage(Image.open(BytesIO(getRndImage())))
     getRndImage()
-    image = Image.open("greeting_card.png")
+    image = Image.open("screen.png")
     photo = ImageTk.PhotoImage(image)
     label = tk.Label(image=photo)
     label.image = photo
@@ -87,7 +87,4 @@ def main():
 
 
 if __name__ == '__main__':
-    while(True):
-        schedule.every(2).minutes.do(main)
-        time.sleep(1)
-    # main()
+    main()
